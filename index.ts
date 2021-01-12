@@ -6,10 +6,10 @@ import {Organization} from "./models/organization";
 
 
 export const sequelize = new Sequelize({
-    username: 'minimal',
-    password: 'postgres',
-    database: 'minimal',
-    host: 'localhost',
+    username: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PASSWORD,
+    database: process.env.DATABASE_NAME,
+    host: process.env.DATABASE_URL,
     port: 5432,
     dialect: 'postgres',
     models: [User, Organization],
