@@ -12,5 +12,5 @@ export class User extends Model {
     org_id: number;
 
     @BelongsTo(() => Organization)
-    Organizations: Organization;
+    organization: Organization;
 }
